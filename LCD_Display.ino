@@ -3,6 +3,7 @@
 void setup()
 {
   pinMode(RS,OUTPUT);
+  pinMode(RW,OUTPUT);
   pinMode(E,OUTPUT);
 
   pinMode(DB0,OUTPUT);
