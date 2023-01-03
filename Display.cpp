@@ -14,6 +14,7 @@ void Clear_Display()
 	digitalWrite(DB7,0);
 
 	digitalWrite(RS,0);
+  digitalWrite(RW,0);
 	digitalWrite(E,0);
 }
 //--------------------------------------------------------------------------------------------------------------
@@ -30,6 +31,7 @@ void Return_Home()
 	digitalWrite(DB7,0);
 
 	digitalWrite(RS,0);
+  digitalWrite(RW,0);
 	digitalWrite(E,0);
 }
 //--------------------------------------------------------------------------------------------------------------
@@ -46,6 +48,7 @@ void Set_Entry_Mode(bool db0,bool db1)
 	digitalWrite(DB7,0);
 
 	digitalWrite(RS,0);
+  digitalWrite(RW,0);
 	digitalWrite(E,0);
 }
 //--------------------------------------------------------------------------------------------------------------
@@ -62,6 +65,7 @@ void Set_Display(bool db0, bool db1, bool db2)
 	digitalWrite(DB7,0);
 
 	digitalWrite(RS,0);
+  digitalWrite(RW,0);
 	digitalWrite(E,0);
 }
 //--------------------------------------------------------------------------------------------------------------
@@ -78,6 +82,7 @@ void Shift_Display_OR_Cursor(bool db0, bool db1, bool db2, bool db3)
 	digitalWrite(DB7,0);
 
 	digitalWrite(RS,0);
+  digitalWrite(RW,0);
 	digitalWrite(E,0);
 }
 //--------------------------------------------------------------------------------------------------------------
@@ -94,6 +99,7 @@ void Set_Function(bool db0, bool db1, bool db2, bool db3, bool db4)
 	digitalWrite(DB7,0);
 
 	digitalWrite(RS,0);
+  digitalWrite(RW,0);
 	digitalWrite(E,0);
 }
 //--------------------------------------------------------------------------------------------------------------
@@ -110,6 +116,7 @@ void Set_CGRAM_Address(bool db0, bool db1, bool db2, bool db3, bool db4, bool db
 	digitalWrite(DB7,0);
 
 	digitalWrite(RS,0);
+  digitalWrite(RW,0);
 	digitalWrite(E,0);
 }
 //--------------------------------------------------------------------------------------------------------------
@@ -125,6 +132,7 @@ void Set_DDRAM_Address(bool db0, bool db1, bool db2, bool db3, bool db4, bool db
 	digitalWrite(DB7,1);
 
 	digitalWrite(RS,0);
+  digitalWrite(RW,0);
 	digitalWrite(E,0);
 }
 //--------------------------------------------------------------------------------------------------------------
@@ -140,5 +148,12 @@ void Read_BF_and_Address(bool db0, bool db1, bool db2, bool db3, bool db4, bool 
 	digitalWrite(DB7,db7);
 
 	digitalWrite(RS,0);
+  digitalWrite(RW,0);
 	digitalWrite(E,0);
 }
+//--------------------------------------------------------------------------------------------------------------
+
+
+
+
+

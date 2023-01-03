@@ -131,6 +131,14 @@ void Read_BF_and_Address(bool db0, bool db1, bool db2, bool db3, bool db4, bool 
 
 
 
+void Write_To_RAM(bool db0, bool db1, bool db2, bool db3, bool db4, bool db5, bool db6, bool db7);
+
+  
+
+
+void Read_From_RAM(bool db0, bool db1, bool db2, bool db3, bool db4, bool db5, bool db6, bool db7);
+
+
 
 
 
