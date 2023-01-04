@@ -19,7 +19,7 @@ void setup()
 
 void loop()
 {
-  Clear_Display();
-  Set_Entry_Mode(1,1);
-  Set_Display(1,1,0);
+  // Clear_Display();
+  // Set_Entry_Mode(1,1);
+  // Set_Display(1,1,0);
 }

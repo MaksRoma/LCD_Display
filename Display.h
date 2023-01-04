@@ -115,16 +115,19 @@ void Set_CGRAM_Address(bool db0, bool db1, bool db2, bool db3, bool db4, bool db
 
 //DB7 = 1,DB6 = AC6,DB5 = AC5, DB4 = AC4, DB3 = AC3, DB2 = AC2, DB1 = AC1, DB0 = AC0;
 //AC6-AC0 - digits of AC(address counter);
-//AC = address of DDRAM
-//if 1-line display mode(N = 0), DDRAM address = 00H - 4FH
-//
-//if 2-line display mode(N = 1), DDRAM address:
-//1 line = 00H - 27H
-//2 line = 40H - 67H
+//AC = address of DDRAM;
+//if 1-line display mode(N = 0), DDRAM address = 00H - 4FH;
+//;
+//if 2-line display mode(N = 1), DDRAM address: ;
+//1 line = 00H - 27H;
+//2 line = 40H - 67H;
 void Set_DDRAM_Address(bool db0, bool db1, bool db2, bool db3, bool db4, bool db5, bool db6);
 //--------------------------------------------------------------------------------------------------------------
 
 
+//RW = 1, DB7 = BF;
+//DB6-DB0 = AC6-AC0;
+//;
 //
 void Read_BF_and_Address(bool db0, bool db1, bool db2, bool db3, bool db4, bool db5, bool db6, bool db7);
 //--------------------------------------------------------------------------------------------------------------
@@ -132,18 +135,11 @@ void Read_BF_and_Address(bool db0, bool db1, bool db2, bool db3, bool db4, bool 
 
 
 void Write_To_RAM(bool db0, bool db1, bool db2, bool db3, bool db4, bool db5, bool db6, bool db7);
+//--------------------------------------------------------------------------------------------------------------
 
-  
 
 
 void Read_From_RAM(bool db0, bool db1, bool db2, bool db3, bool db4, bool db5, bool db6, bool db7);
-
-
-
-
-
-
-
 
 
 #endif

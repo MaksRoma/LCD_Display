@@ -148,12 +148,39 @@ void Read_BF_and_Address(bool db0, bool db1, bool db2, bool db3, bool db4, bool 
 	digitalWrite(DB7,db7);
 
 	digitalWrite(RS,0);
+  digitalWrite(RW,1);
+	digitalWrite(E,0);
+}
+//--------------------------------------------------------------------------------------------------------------
+void Write_To_RAM(bool db0, bool db1, bool db2, bool db3, bool db4, bool db5, bool db6, bool db7)
+{
+  digitalWrite(DB0,db0);
+	digitalWrite(DB1,db1);
+	digitalWrite(DB2,db2);
+	digitalWrite(DB3,db3);
+	digitalWrite(DB4,db4);
+	digitalWrite(DB5,db5);
+	digitalWrite(DB6,db6);
+	digitalWrite(DB7,db7);
+
+	digitalWrite(RS,1);
   digitalWrite(RW,0);
 	digitalWrite(E,0);
 }
 //--------------------------------------------------------------------------------------------------------------
+void Read_From_RAM(bool db0, bool db1, bool db2, bool db3, bool db4, bool db5, bool db6, bool db7)
+{
+  digitalWrite(DB0,db0);
+	digitalWrite(DB1,db1);
+	digitalWrite(DB2,db2);
+	digitalWrite(DB3,db3);
+	digitalWrite(DB4,db4);
+	digitalWrite(DB5,db5);
+	digitalWrite(DB6,db6);
+	digitalWrite(DB7,db7);
 
-
-
-
-
+	digitalWrite(RS,1);
+  digitalWrite(RW,1);
+	digitalWrite(E,0);
+}
+//--------------------------------------------------------------------------------------------------------------
