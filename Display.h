@@ -12,8 +12,11 @@
 #define E     11
 #define RS    12
 //--------------------------------------------------------------------------------------------------------------
-//Function for write data from DB7-DB4 ('D' Bus) to LCD
-void Print_DBus(uint8_t data);
+//Function for print data to screen
+void Print_Data(uint8_t data);
+//Function for print command to lcd
+void Print_CMD(uint8_t data);
+//Setup Display
 void LCD_Setup();
 //--------------------------------------------------------------------------------------------------------------
 #endif
