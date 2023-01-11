@@ -1,6 +1,9 @@
 #include "Display.h"
+#include "CGRAM.h"
 
 const char str[] = "probuy gru";
+uint8_t i = 0;
+
 
 void setup()
 {
@@ -13,13 +16,14 @@ void setup()
   pinMode(DB7,OUTPUT);
 
   LCD_Setup();
-  
-  Print_CMD(0x80);
-  delay(2);
+  delay(1000);
 
-  millis();
-  for(int i = 0; i < 10; i++)
-    Print_Data(str[i]);
+
+  Print_CMD(0x80);
+  delay(50);
+
+  Print_Data(0x41);
+
 }
 
 void loop()

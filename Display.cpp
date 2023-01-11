@@ -13,49 +13,71 @@ void Print_DBus(uint8_t num)
 void Print_Data(uint8_t data)
 {
   digitalWrite(RS, HIGH);
-  Print_DBus((data & 0xF0) >> 4);    //print MSB 4 bits
-  delay(0.5);
+  //print MSB 4 bits
+  Print_DBus((data & 0xF0) >> 4);
+  delay(2);
   digitalWrite(E,HIGH);
-  delay(0.5);
+  delay(2);
   digitalWrite(E,LOW);
-  delay(0.5);
-  Print_DBus(data & 0x0F);           //print LSB 4 bits
-  delay(0.5);
+  delay(2);
+  //print LSB 4 bits
+  Print_DBus(data & 0x0F);
+  delay(2);
   digitalWrite(E,HIGH);
-  delay(0.5);
+  delay(2);
   digitalWrite(E,LOW);
-  delay(0.5);
+  delay(2);
 }
 //--------------------------------------------------------------------------------------------------------------
 void Print_CMD(uint8_t cmd)
 {
   digitalWrite(RS, LOW);
-  Print_DBus((cmd & 0xF0) >> 4);    //print MSB 4 bits
+  //print MSB 4 bits
+  Print_DBus((cmd & 0xF0) >> 4);
   //---latching----
-  delay(0.5);
+  delay(2);
   digitalWrite(E,HIGH);
-  delay(0.5);
+  delay(2);
   digitalWrite(E,LOW);
-  delay(0.5);
-  Print_DBus(cmd & 0x0F);           //print LSB 4 bits
+  delay(2);
+  //print LSB 4 bits
+  Print_DBus(cmd & 0x0F);
   //---latching----
-  delay(0.5);
+  delay(2);
   digitalWrite(E,HIGH);
-  delay(0.5);
+  delay(2);
   digitalWrite(E,LOW);
-  delay(0.5);
+  delay(2);
 }
 //--------------------------------------------------------------------------------------------------------------
 void LCD_Setup()
 {
+  delay(50);
+  Print_CMD(0x2);
+  delay(50);
+  Print_CMD(0x2);
+  delay(50);
   Print_CMD(0x28); //4 bit mode, 2-line display mode, 5x8 dots0
-  delay(0.5);
+  delay(50);
   Print_CMD(0x0C); //turn on display (without cursor)
-  delay(0.5);
+  delay(50);
   Print_CMD(0x06); //set entry mode (in which direction the LCD will print characters)
-  delay(0.5);
+  delay(50);
   Print_CMD(0x01); //clear display
-  delay(0.5);
+  delay(50);
+  
+}
+//--------------------------------------------------------------------------------------------------------------
+void Set_CGRAM(uint8_t* Char_Arr)
+{
+  Print_Data(Char_Arr[0]);
+  Print_Data(Char_Arr[1]);
+  Print_Data(Char_Arr[2]);
+  Print_Data(Char_Arr[3]);
+  Print_Data(Char_Arr[4]);
+  Print_Data(Char_Arr[5]);
+  Print_Data(Char_Arr[6]);
+  Print_Data(Char_Arr[7]);
 }
 //--------------------------------------------------------------------------------------------------------------
 

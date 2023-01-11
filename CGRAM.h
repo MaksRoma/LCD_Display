@@ -1,7 +1,8 @@
 #ifndef CGRAM_h
 #define CGRAM_h
 
-byte P_Ukr[8] = {
+byte P_Ukr[8] = 
+{
 	0b11111,
 	0b10001,
 	0b10001,
@@ -12,7 +13,8 @@ byte P_Ukr[8] = {
 	0b00000
 };
 
-byte R_Ukr[8] = {
+byte R_Ukr[8] = 
+{
 	0b11100,
 	0b10010,
 	0b10010,
@@ -23,7 +25,8 @@ byte R_Ukr[8] = {
 	0b00000
 };
 
-byte O_Ukr[8] = {
+byte O_Ukr[8] = 
+{
 	0b00000,
 	0b01110,
 	0b10001,
@@ -34,7 +37,8 @@ byte O_Ukr[8] = {
 	0b00000
 };
 
-byte b_Ukr[8] = {
+byte b_Ukr[8] = 
+{
 	0b01110,
 	0b10000,
 	0b11100,
@@ -45,7 +49,8 @@ byte b_Ukr[8] = {
 	0b00000
 };
 
-byte y_Ukr[8] = {
+byte y_Ukr[8] = 
+{
 	0b11110,
 	0b00000,
 	0b10010,
@@ -56,7 +61,8 @@ byte y_Ukr[8] = {
 	0b00000
 };
 
-byte g_Ukr[8] = {
+byte g_Ukr[8] = 
+{
 	0b00000,
 	0b11110,
 	0b10000,
