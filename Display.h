@@ -1,3 +1,4 @@
+#include <stdint.h>
 #ifndef Display_h
 #define Display_h
 //--------------------------------------------------------------------------------------------------------------
@@ -20,5 +21,10 @@ void Print_CMD(uint8_t cmd);
 void LCD_Setup();
 //set custom character to CGRAM
 void Set_CGRAM(uint8_t* Char_Arr);
+//print string to lcd
+void Print_To_LCD(uint8_t* str);
+void Print_To_LCD(const char* str);
+//same function for print integer numbers to lcd
+void Print_To_LCD(int64_t num);
 //--------------------------------------------------------------------------------------------------------------
 #endif

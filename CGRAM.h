@@ -1,7 +1,8 @@
 #ifndef CGRAM_h
 #define CGRAM_h
 
-byte P_Ukr[8] = 
+//Ukrainian letter 'P'
+byte _Pattern_1[8] = 
 {
 	0b11111,
 	0b10001,
@@ -13,7 +14,8 @@ byte P_Ukr[8] =
 	0b00000
 };
 
-byte R_Ukr[8] = 
+//Ukrainian letter 'R'
+byte _Pattern_2[8] = 
 {
 	0b11100,
 	0b10010,
@@ -25,7 +27,8 @@ byte R_Ukr[8] =
 	0b00000
 };
 
-byte O_Ukr[8] = 
+//Ukrainian letter 'O'
+byte _Pattern_3[8] = 
 {
 	0b00000,
 	0b01110,
@@ -37,7 +40,8 @@ byte O_Ukr[8] =
 	0b00000
 };
 
-byte b_Ukr[8] = 
+//Ukrainian letter 'B'
+byte _Pattern_4[8] = 
 {
 	0b01110,
 	0b10000,
@@ -49,7 +53,8 @@ byte b_Ukr[8] =
 	0b00000
 };
 
-byte y_Ukr[8] = 
+//Ukrainian letter 'Short I'
+byte _Pattern_5[8] = 
 {
 	0b11110,
 	0b00000,
@@ -61,7 +66,8 @@ byte y_Ukr[8] =
 	0b00000
 };
 
-byte g_Ukr[8] = 
+//Ukrainian letter 'h'
+byte _Pattern_6[8] = 
 {
 	0b00000,
 	0b11110,
@@ -73,6 +79,31 @@ byte g_Ukr[8] =
 	0b00000
 };
 
+//
+byte _Pattern_7[8] = 
+{
+	0b00000,
+	0b00000,
+	0b00000,
+	0b00000,
+	0b00000,
+	0b00000,
+	0b00000,
+	0b00000
+};
+
+//
+byte _Pattern_8[8] = 
+{
+	0b00000,
+	0b00000,
+	0b00000,
+	0b00000,
+	0b00000,
+	0b00000,
+	0b00000,
+	0b00000
+};
 
 
 #endif
