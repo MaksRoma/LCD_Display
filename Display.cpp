@@ -1,3 +1,5 @@
+#include <stdint.h>
+#include "Arduino.h"
 #include "Display.h"
 /*--------------------------------------------------------------------------------------------------------------*/
 void Print_DBus(uint8_t num)
@@ -34,7 +36,7 @@ void Print_CMD(uint8_t cmd)
 /*--------------------------------------------------------------------------------------------------------------*/
 void LCD_Setup()
 {
-  // delay(50);
+  delay(100);
 
   digitalWrite(RS, LOW);
 
@@ -48,10 +50,10 @@ void LCD_Setup()
 
   Print_DBus(0x2);
   delayMicroseconds(100);
-  Print_CMD(0x28); //4 bit mode, 2-line display mode, 5x8 dots
-  Print_CMD(0x0C); //turn on display (without cursor)
-  Print_CMD(0x06); //set entry mode (in which direction the LCD will print characters)
-  Print_CMD(0x01); //clear display
+  Print_CMD(FUNCTION_SET | _4BIT_MODE | _2_LINE | _5x8_DOTS);
+  Print_CMD(DISPLAY_CONTROL | DISPLAY_ON );
+  Print_CMD(ENTRY_MODE_SET | ENTRY_LEFT);
+  Print_CMD(CLEAR_SCREEN);
 }
 /*--------------------------------------------------------------------------------------------------------------*/
 void Set_CGRAM(uint8_t* Char_Arr)
@@ -90,4 +92,3 @@ void Print_To_LCD(int32_t num,uint8_t base)
     Print_Data(buf[i]);
 }
 /*--------------------------------------------------------------------------------------------------------------*/
-
